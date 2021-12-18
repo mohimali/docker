@@ -1,0 +1,5 @@
+.idea
+mongodb/mongodb-init/db
+mongodb/mongodb-standalone/db
+mongodb/mongodb-replica/db
+mongodb/mongodb-replica/key
