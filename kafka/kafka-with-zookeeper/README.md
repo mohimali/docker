@@ -1,5 +1,6 @@
 # Setup kafka
-A quick and easy way to set up kafka locally 
+A quick and easy way to set up kafka locally.
+
 
 ## Start kafka container
 ```
@@ -27,3 +28,7 @@ Ssh inside kafka container
 ```
 docker exec -it kafka1 /bin/bash
 ```
+
+##Useful ui tools to manage kafka
+Conduktor is a good tool for visualising kafka.
+Kafka ui is also good - https://github.com/provectus/kafka-ui

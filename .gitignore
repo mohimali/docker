@@ -5,3 +5,4 @@ mongodb/mongodb-replica/db
 mongodb/mongodb-replica/key
 portainer/portainer_data
 kafka/kafka-with-zookeeper/kafka
+keycloak/postgres_data
