@@ -22,11 +22,15 @@ View logs while you run requests
 docker logs -f local-mock-server
 ```
 
-It even has a UI
+It even has a UI!
 
 http://localhost:9999/mockserver/dashboard
 ![](images/mock-ui.png)
 
 #Clean
+```
+docker stop local-mock-server
+docker rm local-mock-server
+```
 
 
