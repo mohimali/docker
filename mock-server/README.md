@@ -16,10 +16,17 @@ docker ps
 
 Then you can run requests to it, try some post and get requests with
 
-
-view logs while you run requests
+View logs while you run requests
 
 ```
-docker logs -f AAAAAAAAAAA
+docker logs -f local-mock-server
 ```
-#
+
+It even has a UI
+
+http://localhost:9999/mockserver/dashboard
+![](images/mock-ui.png)
+
+#Clean
+
+
