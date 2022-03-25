@@ -5,6 +5,7 @@ docker-compose up -d
 
 Access url at http://localhost:9000
 
+It will allow you to create an account, if you forget it then clean and start again
 
 ## Clean
 ```

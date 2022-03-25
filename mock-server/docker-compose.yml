@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+
+  keycloak:
+    image: mockserver/mockserver
+    container_name: local-mock-server
+    ports:
+      - 9999:1080
