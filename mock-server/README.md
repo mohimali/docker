@@ -7,7 +7,7 @@ This is a quick way to help you set up a mock server that you can point your app
 - does not need the internet to work 
 
 
-##Setup
+## Setup
 ```
 docker-compose up -d
 docker ps
@@ -27,7 +27,7 @@ It even has a UI!
 http://localhost:9999/mockserver/dashboard
 ![](images/mock-ui.png)
 
-#Clean
+# Clean
 ```
 docker stop local-mock-server
 docker rm local-mock-server
