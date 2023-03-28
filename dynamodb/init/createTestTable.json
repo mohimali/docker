@@ -1,0 +1,15 @@
+{
+  "TableName": "ExampleTable",
+  "KeySchema": [
+    { "AttributeName": "MyId", "KeyType": "HASH" },
+    { "AttributeName": "SK", "KeyType": "RANGE" }
+  ],
+  "AttributeDefinitions": [
+    { "AttributeName": "MyId", "AttributeType": "S" },
+    { "AttributeName": "SK", "AttributeType": "S" }
+  ],
+  "ProvisionedThroughput": {
+    "ReadCapacityUnits": 1,
+    "WriteCapacityUnits": 1
+  }
+}

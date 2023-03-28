@@ -3,7 +3,7 @@ version: '3.7'
 services:
   dynamodb:
     image: amazon/dynamodb-local:latest
-    container_name: my-dynamodb
+    container_name: dynamodb
     hostname: dynamodb
     restart: always
     volumes:
@@ -12,3 +12,30 @@ services:
       - "8000:8000"
     user: root
     command: "-jar DynamoDBLocal.jar -sharedDb -dbPath /home/dynamodblocal/data/"
+  aws-cli:
+    image: amazon/aws-cli:latest
+    depends_on:
+      - dynamodb
+    environment:
+      AWS_DEFAULT_PROFILE: local
+      AWS_ENDPOINT: --endpoint-url=http://dynamodb:8000
+    entrypoint: /bin/sh -c
+    volumes:
+      - './init:/init'
+    command: >
+      '
+       for script_name in /init/*.sh; do
+         sh $$script_name
+       done
+      '
+  dynamodb-admin:
+    image: aaronshaf/dynamodb-admin:latest
+    ports:
+      - "8002:8001"
+    environment:
+      DYNAMO_ENDPOINT: "http://dynamodb:8000"
+      AWS_REGION: "us-west-2"
+      AWS_ACCESS_KEY_ID: local
+      AWS_SECRET_ACCESS_KEY: local
+    depends_on:
+      - dynamodb
